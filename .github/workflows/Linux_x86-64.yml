@@ -3,13 +3,13 @@ name: Linux_x86-64
 on:
   push:
     branches:
-      - beta
+      - fs-uae-3
       - master
       - stable
       - test
   pull_request:
     branches:
-      - beta
+      - fs-uae-3
       - master
       - stable
 
