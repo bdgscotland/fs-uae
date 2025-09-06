@@ -428,7 +428,7 @@ def calculateVersion(
     #         if line.startswith("PACKAGE_VERSION="):
     #             version_str = line[16:].strip()
     version = Version(version_str)
-    if auto_revision:
+    if auto_revision and False:
         version_commit = findLastCommitForFile("BASEVERSION.FS")
         increment = numCommitsSince(version_commit)
         if increment_revision:
@@ -440,7 +440,7 @@ def calculateVersion(
     if "--commit" in sys.argv:
         version.commit = findlastCommit()
 
-    if True:
+    if False:
         branch = None
         githubRef = os.environ.get("GITHUB_REF")
         if githubRef is not None:
