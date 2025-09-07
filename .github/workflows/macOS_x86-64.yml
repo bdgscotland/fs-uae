@@ -137,7 +137,7 @@ jobs:
         if: >-
           env.DROPBOX_REFRESH_TOKEN != null && (
             github.ref == 'refs/heads/beta' ||
-            github.ref == 'refs/heads/dev' ||
+            github.ref == 'refs/heads/fs-uae-3' ||
             github.ref == 'refs/heads/main' ||
             github.ref == 'refs/heads/master' ||
             github.ref == 'refs/heads/stable' ||
