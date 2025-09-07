@@ -41,17 +41,18 @@ progdir:
 
 	# cd ../.. && python3 fsbuild/standalone.py dist/windows/$(fs_uae_dir)
 	cp $$MINGW_PREFIX/bin/libgcc_s_seh-1.dll $(fs_uae_dir)
-	cp $$MINGW_PREFIX/bin/libglib-2.0-0.dll $(fs_uae_dir)
-	cp $$MINGW_PREFIX/bin/libiconv-2.dll $(fs_uae_dir)
-	cp $$MINGW_PREFIX/bin/libintl-8.dll $(fs_uae_dir)
-	cp $$MINGW_PREFIX/bin/libmpeg2-0.dll $(fs_uae_dir)
-	cp $$MINGW_PREFIX/bin/libmpeg2convert-0.dll $(fs_uae_dir)
-	cp $$MINGW_PREFIX/bin/libpng16-16.dll $(fs_uae_dir)
 	cp $$MINGW_PREFIX/bin/libstdc++-6.dll $(fs_uae_dir)
 	cp $$MINGW_PREFIX/bin/libwinpthread-1.dll $(fs_uae_dir)
-	cp $$MINGW_PREFIX/bin/OpenAL32.dll $(fs_uae_dir)
-	cp $$MINGW_PREFIX/bin/SDL2.dll $(fs_uae_dir)
-	cp $$MINGW_PREFIX/bin/zlib1.dll $(fs_uae_dir)
+
+	cp ../../build/env/_prefix/bin/libglib-2.0-0.dll $(fs_uae_dir)
+	cp ../../build/env/_prefix/bin/libiconv-2.dll $(fs_uae_dir)
+	cp ../../build/env/_prefix/bin/libintl-8.dll $(fs_uae_dir)
+	cp ../../build/env/_prefix/bin/libmpeg2-0.dll $(fs_uae_dir)
+	cp ../../build/env/_prefix/bin/libmpeg2convert-0.dll $(fs_uae_dir)
+	cp ../../build/env/_prefix/bin/libpng16-16.dll $(fs_uae_dir)
+	cp ../../build/env/_prefix/bin/OpenAL32.dll $(fs_uae_dir)
+	cp ../../build/env/_prefix/bin/SDL2.dll $(fs_uae_dir)
+	cp ../../build/env/_prefix/bin/zlib1.dll $(fs_uae_dir)
 
 	python3 sign.py $(fs_uae_dir)/*.exe
 
