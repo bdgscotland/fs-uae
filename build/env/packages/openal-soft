@@ -11,8 +11,7 @@ REVISION=1
 . build/env/scripts/package.sh
 
 build/env/scripts/download.py \
-https://openal-soft.org/openal-releases/\
-$PACKAGE.tar.bz2 \
+https://fs-uae.net/files/openal-soft-1.24.3.tar.bz2 \
 sha256:$CHECKSUM
 
 rm -Rf build/env/_temp && mkdir build/env/_temp && cd build/env/_temp

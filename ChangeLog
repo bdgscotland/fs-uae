@@ -1,3 +1,7 @@
+Version 3.2.35:
+
+* Fix crash caused when opening the "More..." input menu.
+
 Version 3.2.x:
 
 * Disable cpu governor warning on Linux.
