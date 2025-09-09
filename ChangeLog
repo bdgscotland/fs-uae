@@ -1,3 +1,7 @@
+Version 3.2.36:
+
+* Better handling of (weird) joystick devices with newlines in name.
+
 Version 3.2.35:
 
 * Fix crash caused when opening the "More..." input menu.

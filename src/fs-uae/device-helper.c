@@ -159,7 +159,14 @@ static void list_joysticks(void)
                SDL_JoystickNumAxes(joystick),
                SDL_JoystickNumBalls(joystick),
                guid_str);
-        printf("   SDLName: \"%s\"\n", SDL_JoystickName(joystick));
+
+        GString *string = g_string_new(SDL_JoystickName(joystick));
+        g_string_replace(string, "\r", "\\r", 0);
+        g_string_replace(string, "\n", "\\n", 0);
+        g_string_replace(string, "\"", "\\\"", 0);
+        printf("   SDLName: \"%s\"\n", string->str);
+        g_string_free(string, TRUE);
+
         flush_stdout();
         SDL_JoystickClose(joystick);
     }

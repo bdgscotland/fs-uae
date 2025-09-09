@@ -114,6 +114,21 @@ char *fs_ml_input_fix_joystick_name(const char *name, int upper)
         n = g_ascii_strup(n, -1);
         g_free(temp);
     }
+
+    char *p = n;
+    while (*p) {
+        if (*p == '\r' || *p == '\n') {
+            *p = ' ';
+        }
+        p++;
+    }
+
+    // GString *string = g_string_new(n);
+    // g_free(n);
+    // g_string_replace(string, "\r", " ", 0);
+    // g_string_replace(string, "\n", " ", 0);
+    // // Take ownership of the string data and return it
+    // return g_string_free(string, FALSE);
     return n;
 }
 
