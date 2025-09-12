@@ -1,7 +1,8 @@
 ---
 layout: docs
-title: X-Arcade controller
-permalink: /docs/x-arcade/
+redirect_from:
+  - /docs/x-arcade/
+title: X-Arcade controllers
 ---
 
 # X-Arcade controllers

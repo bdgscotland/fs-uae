@@ -1,9 +1,11 @@
 ---
 layout: docs
-title: WHDLoad
+redirect_from:
+  - /docs/whdload/
+title: WHDLoad support
 ---
 
-# WHDLoad
+# WHDLoad support
 
 [WHDLoad](http://whdload.de/) is a sofware solution used to (primarily) allow floppy-based games to be installed to an Amiga hard drive and run from Workbench. Custom WHDLoad "slaves" are written for each game, which patches the game to work on modern HD-based Amigas.
 
