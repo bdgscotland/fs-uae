@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Kickstarts
+---
+
 # Kickstarts
 
 For the best emulation experience, you should have copies of the original

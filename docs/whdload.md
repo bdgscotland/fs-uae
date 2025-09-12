@@ -1,3 +1,8 @@
+---
+layout: docs
+title: WHDLoad
+---
+
 # WHDLoad
 
 [WHDLoad](http://whdload.de/) is a sofware solution used to (primarily)

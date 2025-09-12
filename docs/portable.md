@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Portable
+---
+
 # Portable Version
 
 FS-UAE includes a portable mode where it can be completely self-contained

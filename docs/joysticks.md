@@ -1,4 +1,7 @@
-
+---
+layout: docs
+title: Joysticks
+---
 
 
 

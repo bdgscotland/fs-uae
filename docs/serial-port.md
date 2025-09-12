@@ -1,4 +1,9 @@
-# Serial Port
+---
+layout: docs
+title: Serial port
+---
+
+# Serial port
 
 FS-UAE includes emulation of the Amiga serial port. The emulation is at least
 good enough for debugging purposes.

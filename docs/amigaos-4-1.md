@@ -1,3 +1,8 @@
+---
+layout: docs
+title: AmigaOS 4.1
+---
+
 # AmigaOS 4.1
 
 UAE Boot ROM cannot be enabled when you want to use AmigaOS 4.1. The UAE

@@ -1,3 +1,8 @@
+---
+layout: docs
+title: macOS
+---
+
 # Notes for macOS Users
 
 ## Fullscreen Spaces

@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Windows
+---
+
 # Notes for Windows Users
 
 This document has some information specific to the Windows version of FS-UAE.

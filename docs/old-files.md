@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Old files
+---
+
 # Old Files and Directories
 
 ## Old Files

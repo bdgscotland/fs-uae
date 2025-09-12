@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Getting started
+---
+
 # Getting Started
 
 This page will help you get started using FS-UAE. It is quite easy to get

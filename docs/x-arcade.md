@@ -1,3 +1,9 @@
+---
+layout: docs
+title: X-Arcade controller
+permalink: /docs/x-arcade/
+---
+
 # X-Arcade Controller
 
 If you have an X-Arcade controller, you need to install some special config

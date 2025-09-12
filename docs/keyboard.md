@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Keyboard
+---
+
 # Keyboard
 
 This document explains how to use keyboard shortcuts in FS-UAE, how FS-UAE

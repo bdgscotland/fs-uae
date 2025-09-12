@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Mouse
+---
+
 # Mouse
 
 ## Middle mouse button

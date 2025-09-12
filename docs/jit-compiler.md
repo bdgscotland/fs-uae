@@ -1,4 +1,9 @@
-# JIT Compiler
+---
+layout: docs
+title: JIT compiler
+---
+
+# JIT compiler
 
 FS-UAE includes a Just-in-Time (JIT) compiler for x86 and x86-64. The JIT
 compiler is used to speed up emulation dramatically, at the expense of some

@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Amiga Forever
+---
+
 # Amiga Forever
 
 You can purchase [Amiga Forever](https://www.amigaforever.com/) Plus or

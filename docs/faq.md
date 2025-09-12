@@ -1,3 +1,8 @@
+---
+layout: docs
+title: FAQ
+---
+
 # FAQ
 
 This page contains answers to some frequently asked questions.

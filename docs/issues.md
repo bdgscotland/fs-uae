@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Known Issues
+---
+
 # Known Issues
 
 ## CyberStorm PPC ROM Handling

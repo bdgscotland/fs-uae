@@ -1,3 +1,8 @@
+---
+layout: docs
+title: Action replay
+---
+
 # Action Replay
 
 TODO: Write something about Action Replay. Bonus points for including some
