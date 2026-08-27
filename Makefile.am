@@ -123,6 +123,8 @@ nodist_fs_uae_SOURCES =
 
 fs_uae_SOURCES = \
         gamemode/lib/gamemode_client.h \
+	src/fs-uae/cmdfifo.c \
+	src/fs-uae/cmdfifo.h \
         src/fs-uae/config.c \
 	src/fs-uae/config-accelerator.c \
 	src/fs-uae/config-accelerator.h \

@@ -29,6 +29,7 @@
 #include <strings.h>
 #include <locale.h>
 #include "fs-uae.h"
+#include "cmdfifo.h"
 #include "recording.h"
 #include "plugins.h"
 #include "options.h"
@@ -237,6 +238,9 @@ static int input_handler_loop(int line)
 #ifdef WITH_LUA
         fs_emu_lua_run_handler("on_fs_uae_read_input");
 #endif
+        /* Queue scheduled releases which are due, so they are picked up by
+         * the input event drain below. */
+        fs_uae_cmd_fifo_update(g_fs_uae_frame);
         last_frame = g_fs_uae_frame;
     }
 
@@ -1306,6 +1310,9 @@ int main(int argc, char *argv[])
 
     //fs_uae_init_input();
     fse_init(FS_EMU_INIT_EVERYTHING);
+
+    // the input event queue exists now, so scripted input can be accepted
+    fs_uae_init_cmd_fifo();
 
     // we initialize the recording module either it is used or not, so it
     // can delete state-specific recordings (if necessary) when states are
