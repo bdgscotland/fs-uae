@@ -22,10 +22,12 @@
 #endif
 
 /* Input events are queued as action | (state << 16), the same encoding used
- * by the netplay receiver, and are drained on the emulation thread. State is
- * recovered as a signed char, so it must fit in 8 bits. */
+ * by the netplay receiver, and are drained on the emulation thread. State
+ * occupies bits 16-23 only and is recovered as a signed char, so it must fit
+ * in 8 bits. */
 #define CMD_STATE_MIN (-128)
 #define CMD_STATE_MAX 127
+#define CMD_STATE_MASK 0xff
 
 #define CMD_MAX_PENDING 64
 #define CMD_MAX_LINE 512
@@ -76,10 +78,18 @@ static int cmd_clamp_state(long value)
 
 /* Queues action | (state << 16) on the input event queue, which is drained on
  * the emulation thread. This does not depend on the window having host input
- * focus. */
+ * focus.
+ *
+ * The state is masked to 8 bits first. A negative state would otherwise sign
+ * extend into the top byte of the packed event, and an event arriving with any
+ * of the high 8 bits set is reported as out of range and discarded before it
+ * reaches the queue, so negative relative motion was silently doing nothing.
+ * The consumer reads the field back as a signed char, which restores the sign.
+ * This matches the relative axis path in the input layer, which clamps to
+ * -128..127 and then masks the packed event with 0x00ffffff. */
 static void cmd_queue_action(int action, int state)
 {
-    fs_emu_queue_action(action, state);
+    fs_emu_queue_action(action, state & CMD_STATE_MASK);
 }
 
 /* Names are matched case-insensitively, with or without the INPUTEVENT_
